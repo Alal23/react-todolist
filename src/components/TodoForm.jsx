@@ -11,6 +11,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       alert("No black todo!");
       return;
     }
+    if (value.length > 40) {
+      alert("Please create a shortest todo text!");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
